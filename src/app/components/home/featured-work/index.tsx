@@ -21,6 +21,137 @@ type Project = {
 
 const featuredProjects: Project[] = [
     {
+        title: "Power BI Bike Sales Performance Dashboard",
+        description:
+            "Developed an interactive Sales Performance Dashboard using Microsoft Power BI Desktop to analyze sales trends, product performance, and customer segmentation. Performed data cleaning, modeling, and visualization to transform raw data into actionable business insights for decision-making.",
+        highlights: [
+            "Developed an interactive sales dashboard analyzing €85M+ revenue and 1.3M+ units sold, enabling clear visibility into business performance across regions and product categories",
+            "Built a structured data model with a custom date table and DAX measures, achieving accurate time-based analysis and 37.8% profit margin insights",
+            "Identified key business drivers, including ~70% revenue contribution from core product category and ~33% from top market, highlighting concentration risks",
+            "Designed a 2-page executive dashboard with dynamic filtering and Top N analysis, improving usability for data-driven decision making and performance monitoring",
+        ],
+        tags: [
+            "Data Visualization",
+            "Power BI",
+            "DAX",
+            "Data Cleaning",
+            "Data Modeling",
+            "Data Analysis",
+            "Data Visualization",
+            "Data Analytics",
+        ],
+        images: [
+            "/images/feature-work/bike1.jpg",
+            "/images/feature-work/bike3.jpg",
+            "/images/feature-work/bike2.jpg",
+            "/images/feature-work/bike4.png",
+        ],
+        githubUrl: "https://github.com/NuhShh/Bike-Sales-Performance-Dashboard-Power-BI",
+        category: "Data Analytics & Visualization",
+    },
+    {
+        title: "Olympic Participation Analysis",
+        description:
+            "This project analyzes over 120 years of Olympic history using the “120 Years of Olympic History: Athletes and Results” dataset from Kaggle, covering around 270,000 athlete records from 1896 to 2016.",
+        highlights: [
+            "Designed and developed the study case for data visualization, transforming raw Olympic data into clear, structured, and insightful visual narratives to support the team’s analytical findings.",
+            "Conducted Exploratory Data Analysis (EDA) to identify patterns, trends, and key insights related to athlete demographics, participation growth, and medal distribution in the Summer Olympic Games.",
+        ],
+        tags: [
+            "Data Visualization",
+            "Python",
+            "Pandas",
+            "Matplotlib",
+            "Seaborn",
+            "Jupyter Notebook",
+            "Olympic Data",
+            "Interactive Charts",
+            "Exploratory Data Analysis (EDA)",
+            "Historical Analysis",
+            "Demographics",
+            "Sports Analytics",
+            "Statistics",
+            "Kaggle Dataset",
+            "Github Pages"
+        ],
+        images: [
+            "/images/feature-work/olympic1.png",
+            "/images/feature-work/olympic2.png",
+            "/images/feature-work/olympic3.png",
+            "/images/feature-work/olympic4.png",
+            "/images/feature-work/olympic5.png",
+        ],
+        githubUrl: "https://github.com/yayaaay/Tugas-Besar-Visualisasi-data-Stream-lit-",
+        demoUrl: "https://yayaaay.github.io/The-120-Year-Olympic-Journey/",
+        category: "Data Analytics & Visualization",
+    },
+    {
+        title: "Medical Check Up System",
+        description:
+            "MCU System is a web application specifically developed to manage the Medical Check-Up (MCU) process at RS Panti Wilasa Dr. Cipto. The system enables medical staff to record, manage, and generate printable health examination reports for MCU participants from various companies.",
+        highlights: [
+            "Independently designed and developed a Laravel-based Medical Check-Up (MCU) management system intended for use by 20+ medical staff and administrative users, covering end-to-end clinical and reporting workflows.",
+            "Built 17+ controller methods and 20+ RESTful API endpoints supporting participant management, analytics dashboards, authentication, and bulk data operations.",
+            "Implemented complex medical data handling (laboratory, radiology, EKG, specialist examinations) with data validation across 40+ clinical fields, ensuring data consistency and integrity.",
+            "Optimized SQL Server queries and joins across multiple tables to support real-time analytics dashboards and reporting for hospital management.",
+        ],
+        tags: [
+            "Laravel",
+            "Full Stack Development",
+            "RESTful API",
+            "SQL Server",
+            "Medical System",
+            "Data Validation",
+            "Healthcare",
+            "Admin Dashboard",
+            "Clinical Data",
+            "Authentication",
+            "Reporting"
+        ],
+        images: [
+            "/images/feature-work/mcu1.png",
+            "/images/feature-work/mcu2.png",
+            "/images/feature-work/mcu3.png",
+            "/images/feature-work/mcu4.png",
+            "/images/feature-work/mcu5.png",
+        ],
+        githubUrl: "https://github.com/NuhShh/mcu-web",
+        category: "Full Stack Development with Interactive Dashboard",
+        classifiedNote: "Source code is classified for institutional use."
+    },
+    {
+        title: "Swanlake - Tech Review Platform",
+        description:
+            "Swanlake is a web and mobile-based application designed to help users explore and review the latest technologies. With so many products on the market, this platform aims to guide users in making informed decisions through community-driven insights.",
+        highlights: [
+            "Led the development process as Lead Developer, coordinating technical decisions and ensuring smooth collaboration between frontend and backend teams.",
+            "Developed and maintained the backend using Laravel 12 (MVC), built RESTful APIs, and handled MySQL database design and optimization.",
+            "Implemented core features such as search and filter functionality, dynamic product comparison, user comments, authentication, and admin management tools.",
+            "Ensured seamless integration between Flutter (mobile) and React.js (web) with backend services, maintaining consistent performance and functionality across both platforms.",
+        ],
+        tags: [
+            "Full Stack Development",
+            "Laravel",
+            "RESTful API",
+            "MySQL",
+            "Flutter",
+            "React.js",
+            "Mobile App",
+            "Web App",
+            "Authentication",
+            "Admin Tools",
+            "Product Comparison",
+            "Community Platform"
+        ],
+        images: [
+            "/images/feature-work/swanlake3.png",
+            "/images/feature-work/swanlake1.png",
+            "/images/feature-work/swanlake2.png",
+        ],
+        githubUrl: "https://github.com/NuhShh/SwanlakeABP",
+        category: "Full Stack Development",
+    },
+    {
         title: "LightGCN — Deep Learning Based Recommendation System",
         description:
             "Applied Light Graph Convolutional Network (LightGCN) to model user–item interactions on the Amazon Reviews dataset across multiple product categories.",
@@ -83,42 +214,6 @@ const featuredProjects: Project[] = [
         githubUrl: "https://github.com/NuhShh/breast-cancer-classification",
         demoUrl: "https://breast-cancer-classification-nuhshh.streamlit.app/",
         category: "Classification Project",
-    },
-    {
-        title: "Olympic Participation Analysis",
-        description:
-            "This project analyzes over 120 years of Olympic history using the “120 Years of Olympic History: Athletes and Results” dataset from Kaggle, covering around 270,000 athlete records from 1896 to 2016.",
-        highlights: [
-            "Designed and developed the study case for data visualization, transforming raw Olympic data into clear, structured, and insightful visual narratives to support the team’s analytical findings.",
-            "Conducted Exploratory Data Analysis (EDA) to identify patterns, trends, and key insights related to athlete demographics, participation growth, and medal distribution in the Summer Olympic Games.",
-        ],
-        tags: [
-            "Data Visualization",
-            "Python",
-            "Pandas",
-            "Matplotlib",
-            "Seaborn",
-            "Jupyter Notebook",
-            "Olympic Data",
-            "Interactive Charts",
-            "Exploratory Data Analysis (EDA)",
-            "Historical Analysis",
-            "Demographics",
-            "Sports Analytics",
-            "Statistics",
-            "Kaggle Dataset",
-            "Github Pages"
-        ],
-        images: [
-            "/images/feature-work/olympic1.png",
-            "/images/feature-work/olympic2.png",
-            "/images/feature-work/olympic3.png",
-            "/images/feature-work/olympic4.png",
-            "/images/feature-work/olympic5.png",
-        ],
-        githubUrl: "https://github.com/yayaaay/Tugas-Besar-Visualisasi-data-Stream-lit-",
-        demoUrl: "https://yayaaay.github.io/The-120-Year-Olympic-Journey/",
-        category: "Data Visualization",
     },
     {
         title: "Diabetes Classification",
@@ -187,73 +282,6 @@ const featuredProjects: Project[] = [
         githubUrl: "https://github.com/NuhShh/IoT-Network-Attacks-Classification",
         category: "Classification Project",
     },
-    {
-        title: "Swanlake - Tech Review Platform",
-        description:
-            "Swanlake is a web and mobile-based application designed to help users explore and review the latest technologies. With so many products on the market, this platform aims to guide users in making informed decisions through community-driven insights.",
-        highlights: [
-            "Led the development process as Lead Developer, coordinating technical decisions and ensuring smooth collaboration between frontend and backend teams.",
-            "Developed and maintained the backend using Laravel 12 (MVC), built RESTful APIs, and handled MySQL database design and optimization.",
-            "Implemented core features such as search and filter functionality, dynamic product comparison, user comments, authentication, and admin management tools.",
-            "Ensured seamless integration between Flutter (mobile) and React.js (web) with backend services, maintaining consistent performance and functionality across both platforms.",
-        ],
-        tags: [
-            "Full Stack Development",
-            "Laravel",
-            "RESTful API",
-            "MySQL",
-            "Flutter",
-            "React.js",
-            "Mobile App",
-            "Web App",
-            "Authentication",
-            "Admin Tools",
-            "Product Comparison",
-            "Community Platform"
-        ],
-        images: [
-            "/images/feature-work/swanlake3.png",
-            "/images/feature-work/swanlake1.png",
-            "/images/feature-work/swanlake2.png",
-        ],
-        githubUrl: "https://github.com/NuhShh/SwanlakeABP",
-        category: "Full Stack Development",
-    },
-    {
-        title: "Medical Check Up System",
-        description:
-            "MCU System is a web application specifically developed to manage the Medical Check-Up (MCU) process at RS Panti Wilasa Dr. Cipto. The system enables medical staff to record, manage, and generate printable health examination reports for MCU participants from various companies.",
-        highlights: [
-            "Independently designed and developed a Laravel-based Medical Check-Up (MCU) management system intended for use by 20+ medical staff and administrative users, covering end-to-end clinical and reporting workflows.",
-            "Built 17+ controller methods and 20+ RESTful API endpoints supporting participant management, analytics dashboards, authentication, and bulk data operations.",
-            "Implemented complex medical data handling (laboratory, radiology, EKG, specialist examinations) with data validation across 40+ clinical fields, ensuring data consistency and integrity.",
-            "Optimized SQL Server queries and joins across multiple tables to support real-time analytics dashboards and reporting for hospital management.",
-        ],
-        tags: [
-            "Laravel",
-            "Full Stack Development",
-            "RESTful API",
-            "SQL Server",
-            "Medical System",
-            "Data Validation",
-            "Healthcare",
-            "Admin Dashboard",
-            "Clinical Data",
-            "Authentication",
-            "Reporting"
-        ],
-        images: [
-            "/images/feature-work/mcu1.png",
-            "/images/feature-work/mcu2.png",
-            "/images/feature-work/mcu3.png",
-            "/images/feature-work/mcu4.png",
-            "/images/feature-work/mcu5.png",
-        ],
-        githubUrl: "https://github.com/NuhShh/mcu-web",
-        category: "Full Stack Development",
-        classifiedNote: "Source code is classified for institutional use."
-    },
-    // ── Add more projects below by copying the object above ──────────────────
 ];
 
 // ── Carousel component (no external library needed) ──────────────────────────

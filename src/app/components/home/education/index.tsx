@@ -2,69 +2,87 @@
 import { useEffect, useState } from "react";
 
 const Education = () => {
-    const [educationData, setEducationData] = useState<any>(null);
-    
-        useEffect(() => {
-            const fetchData = async () => {
-                try {
-                    const res = await fetch('/api/page-data')
-                    if (!res.ok) throw new Error('Failed to fetch')
-                    const data = await res.json()
-                    setEducationData(data?.educationData)
-                } catch (error) {
-                    console.error('Error fetching services:', error)
-                }
-            }
-    
-            fetchData()
-        }, [])
-    
+    const educations = [
+        {
+            institution: "Universitas Telkom",
+            degree: "Bachelor of Informatics",
+            location: "Bandung, Indonesia",
+            period: "Sep 2022 – Jan 2026",
+            gpa: "3.85 / 4.00",
+            coursework: [
+                "Data Analysis",
+                "Machine Learning",
+                "Data Mining",
+                "Artificial Intelligence",
+                "Database Systems",
+                "Statistics for Data Science",
+                "Data Structures and Algorithms",
+            ],
+        },
+        {
+            institution: "SMAN 5 Semarang",
+            degree: "Natural Sciences (Science Track)",
+            location: "Semarang, Indonesia",
+            period: "Jun 2019 – May 2022",
+            gpa: null,
+            coursework: [],
+        },
+    ];
+
     return (
         <section>
             <div className="container">
                 <div className="border-x border-primary/10">
-                    <div className="flex flex-col max-w-3xl mx-auto py-10 px-4 sm:px-7">
-                        <div className="flex flex-col xs:flex-row gap-5 items-center justify-between">
-                            <p className="text-sm tracking-[2px] text-primary uppercase font-medium">Education</p>
-                        </div>
-                    </div>
+                    <div className="flex flex-col gap-6 max-w-3xl mx-auto px-4 sm:px-7 py-11 md:py-20">
+                        <p className="text-sm tracking-[2px] text-primary uppercase font-medium">Education</p>
 
-                    <div className="border-t border-primary/10">
-                        <div className="relative max-w-3xl mx-auto px-4 sm:px-0 py-10">
-                            <div className="hidden sm:flex absolute left-5 sm:left-[15.9rem] sm:translate-x-1/2 top-0 bottom-0 w-px bg-primary/10" />
-
-                            <div className="relative">
-                                {educationData?.map((item:any, index:any) => (
-                                    <div
-                                        key={index}
-                                        className={`relative flex flex-col sm:flex-row sm:items-start gap-4 ${index !== educationData.length - 1 ? "mb-8 sm:mb-16" : ""
-                                            }`}
-                                    >
-                                        <div className="relative pl-8 sm:pl-0 sm:w-64 sm:text-right sm:pr-16">
-                                            <p className="ml-2.5 sm:ml-0 text-base font-normal sm:mb-0 leading-relaxed">
-                                                {item.date}
+                        <div className="flex flex-col divide-y divide-primary/10 border border-primary/10 rounded-xl overflow-hidden">
+                            {educations.map((edu, i) => (
+                                <div key={i} className="flex flex-col gap-3 p-5 sm:p-6">
+                                    <div className="flex flex-col xs:flex-row xs:items-start xs:justify-between gap-2">
+                                        <div className="flex flex-col gap-0.5">
+                                            <h5 className="font-medium text-primary">{edu.institution}</h5>
+                                            <p className="text-sm text-secondary">
+                                                {edu.degree} · {edu.location}
                                             </p>
-
-                                            {/* Bullet Point */}
-                                            <div className="absolute left-1.5 sm:left-auto sm:-right-3 top-0 z-10 p-1.5 border border-primary/10 rounded-full bg-white">
-                                                <div className="w-3 h-3 bg-primary rounded-full" />
-                                            </div>
                                         </div>
-
-                                        <div className="flex flex-col gap-2 flex-1 sm:pl-16 ml-2 sm:ml-0">
-                                            <h5 className="font-semibold">{item.title}</h5>
-                                            <p className="text-primary">{item.subtitle}</p>
+                                        <div className="flex flex-col items-start xs:items-end gap-1.5 shrink-0">
+                                            <span className="text-xs text-secondary whitespace-nowrap border border-primary/10 rounded-full px-3 py-1">
+                                                {edu.period}
+                                            </span>
+                                            {edu.gpa && (
+                                                <span className="text-xs font-medium text-green-700 bg-green-50 border border-green-200 rounded-full px-3 py-1 whitespace-nowrap">
+                                                    GPA {edu.gpa}
+                                                </span>
+                                            )}
                                         </div>
                                     </div>
-                                ))}
-                            </div>
+
+                                    {edu.coursework.length > 0 && (
+                                        <div className="flex flex-col gap-2">
+                                            <p className="text-xs text-secondary uppercase tracking-widest">
+                                                Relevant Coursework
+                                            </p>
+                                            <div className="flex flex-wrap gap-2">
+                                                {edu.coursework.map((course, ci) => (
+                                                    <span
+                                                        key={ci}
+                                                        className="text-xs px-2.5 py-1 rounded-md border border-primary/10 text-secondary"
+                                                    >
+                                                        {course}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Education
+export default Education;

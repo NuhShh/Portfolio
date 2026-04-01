@@ -1,21 +1,43 @@
 import { Badge } from "@/components/ui/badge";
 
 const AboutMe = () => {
-    const servicesBedge = [
-        "Machine Learning Modeling",
-        "Python",
-        "Data Visualization",
-        "Recommendation Systems",
-        "Data Analysis & EDA",
-        "Model Evaluation",
-        "Feature Engineering",
-        "Healthcare Data Systems",
-        "SQL Server",
-        "RESTful API Development",
-        "Laravel Backend Development",
-        "Data Visualization",
-        "Model Deployment (Streamlit Cloud)"
-      ];
+    const skillGroups = [
+        {
+            label: "Data & Analytics",
+            skills: [
+                "Python (Pandas, NumPy)",
+                "SQL",
+                "Power BI",
+                "EDA & Data Cleaning",
+                "Tableau",
+                "Matplotlib / Seaborn",
+                "Excel",
+            ],
+        },
+        {
+            label: "Machine Learning",
+            skills: [
+                "scikit-learn",
+                "Feature Engineering",
+                "Model Evaluation",
+                "Recommendation Systems",
+                "Stacking Ensemble",
+                "Model Deployment (Streamlit)",
+            ],
+        },
+        {
+            label: "Web & Database",
+            skills: [
+                "Laravel",
+                "RESTful API Development",
+                "SQL Server",
+                "MySQL",
+                "Vue.js",
+                "Git / GitHub",
+            ],
+        },
+    ];
+
     return (
         <section>
             <div className="container">
@@ -24,34 +46,46 @@ const AboutMe = () => {
                         <div className="flex flex-col gap-4">
                             <p className="text-sm tracking-[2px] text-primary uppercase font-medium">About Me</p>
                             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px]">
-                                Hey there. I'm Nuh - an Informatics graduate with strong interests in <span></span>
+                                Hey there. I'm Nuh — an Informatics graduate with strong foundations in{" "}
                                 <span className="bg-[linear-gradient(90deg,_rgba(243,202,77,0.4)_0%,_rgba(243,202,77,0.05)_100%)]">
-                                    Data Science and Machine Learning
-                                </span>, 
-                                experienced in building end-to-end ML projects, performing data analysis, 
-                                and developing scalable web-based systems in healthcare environments.
+                                    Data Analytics and Machine Learning
+                                </span>
+                                , with hands-on experience building end-to-end data-driven systems,
+                                predictive models, and scalable web-based solutions in healthcare environments.
                             </h2>
                             <h5 className="text-secondary font-normal">
-                                Proficient in Python, SQL, and data visualization tools, with a strong analytical mindset and the ability to work independently or with a team.
+                                Proven ability to analyze large-scale datasets (270K+ records), develop ML models
+                                with measurable performance improvements, and deploy data products for real-world
+                                use cases — including healthcare systems used by 20+ users. Skilled in Python, SQL,
+                                and data visualization tools with a strong focus on turning data into actionable
+                                insights and scalable solutions.
                             </h5>
                         </div>
-                        <div className="flex flex-col gap-4">
+
+                        <div className="flex flex-col gap-6">
                             <p className="text-sm text-primary uppercase font-medium">Expertise</p>
-                            <div className="flex flex-wrap gap-2 sm:gap-3">
-                                {servicesBedge?.map((value, index) => {
-                                    return (
-                                        <Badge variant={"outline"} key={index} className="py-1.5 px-3 rounded-lg">
-                                            <p className="text-xs sm:text-sm font-medium text-primary">{value}</p>
-                                        </Badge>
-                                    )
-                                })}
-                            </div>
+                            {skillGroups.map((group, gi) => (
+                                <div key={gi} className="flex flex-col gap-2.5">
+                                    <p className="text-xs text-secondary uppercase tracking-widest">{group.label}</p>
+                                    <div className="flex flex-wrap gap-2 sm:gap-3">
+                                        {group.skills.map((skill, si) => (
+                                            <Badge
+                                                variant={"outline"}
+                                                key={si}
+                                                className="py-1.5 px-3 rounded-lg"
+                                            >
+                                                <p className="text-xs sm:text-sm font-medium text-primary">{skill}</p>
+                                            </Badge>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default AboutMe
+export default AboutMe;
