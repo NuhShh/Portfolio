@@ -20,6 +20,21 @@ const Education = () => {
             ],
         },
         {
+            institution: "Dibimbing.id",
+            degree: "Data Science & Machine Learning Bootcamp",
+            location: "Indonesia",
+            period: "Jun 2026 – Present",
+            gpa: null,
+            coursework: [
+                "Data Preprocessing and Exploratory Data Analysis",
+                "Statistical Analysis and Feature Engineering",
+                "Supervised and Unsupervised Learning",
+                "Ensemble Learning",
+                "Time Series Forecasting",
+                "SQL and Data Analysis with Python",
+            ],
+        },
+        {
             institution: "SMAN 5 Semarang",
             degree: "Natural Sciences (Science Track)",
             location: "Semarang, Indonesia",

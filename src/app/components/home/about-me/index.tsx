@@ -46,19 +46,10 @@ const AboutMe = () => {
                         <div className="flex flex-col gap-4">
                             <p className="text-sm tracking-[2px] text-primary uppercase font-medium">About Me</p>
                             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px]">
-                                Hey there. I'm Nuh — an Informatics graduate with strong foundations in{" "}
-                                <span className="bg-[linear-gradient(90deg,_rgba(243,202,77,0.4)_0%,_rgba(243,202,77,0.05)_100%)]">
-                                    Data Analytics and Machine Learning
-                                </span>
-                                , with hands-on experience building end-to-end data-driven systems,
-                                predictive models, and scalable web-based solutions in healthcare environments.
+                                Informatics graduate with a strong foundation in Data Science, Machine Learning, and statistical analysis. Experienced in building end-to-end machine learning pipelines, analyzing structured datasets, and developing data-driven systems for real-world applications.
                             </h2>
                             <h5 className="text-secondary font-normal">
-                                Proven ability to analyze large-scale datasets (270K+ records), develop ML models
-                                with measurable performance improvements, and deploy data products for real-world
-                                use cases — including healthcare systems used by 20+ users. Skilled in Python, SQL,
-                                and data visualization tools with a strong focus on turning data into actionable
-                                insights and scalable solutions.
+                                Proficient in Python, SQL, and data visualization, with hands-on experience in recommendation systems, predictive modeling, and classification. Demonstrated research results with measurable improvements in recommendation performance and experience developing healthcare information systems used by 20+ staff. Focused on transforming data into actionable insights through analytical problem-solving and machine learning solutions.
                             </h5>
                         </div>
 
